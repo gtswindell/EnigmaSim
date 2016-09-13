@@ -3,12 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace EnigmaSim.Components.Rotor
+namespace GTSoft.EnigmaSim.Components.Rotor
 {
 
     public class BaseRotorCollection : ICollection<BaseRotor>
     {
-        private Dictionary<string, BaseRotor> rotors = new Dictionary<string, BaseRotor>();
+        
+		public class BaseRotorCollectionException : Exception
+		{
+			public BaseRotorCollectionException(string msg)
+				: base(msg)
+			{
+			}
+		}
+
+
+
+
+		private Dictionary<string, BaseRotor> rotors = new Dictionary<string, BaseRotor>();
 
         public BaseRotorCollection(params BaseRotor[] rotors)
         {
@@ -35,12 +47,12 @@ namespace EnigmaSim.Components.Rotor
 
         void ICollection<BaseRotor>.Add(BaseRotor item)
         {
-            throw new ApplicationException("The collection is read only");
+            throw new BaseRotorCollectionException("The collection is read only");
         }
 
         void ICollection<BaseRotor>.Clear()
         {
-            throw new ApplicationException("The collection is read only");
+            throw new BaseRotorCollectionException("The collection is read only");
         }
 
         bool ICollection<BaseRotor>.Contains(BaseRotor item)
@@ -68,7 +80,7 @@ namespace EnigmaSim.Components.Rotor
 
         bool ICollection<BaseRotor>.Remove(BaseRotor item)
         {
-            throw new ApplicationException("The collection is read only");
+            throw new BaseRotorCollectionException("The collection is read only");
         }
 
         #endregion

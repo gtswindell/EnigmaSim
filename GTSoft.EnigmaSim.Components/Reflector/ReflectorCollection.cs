@@ -3,10 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace EnigmaSim.Components.Reflector
+namespace GTSoft.EnigmaSim.Components.Reflector
 {
-    
-    
+
+	public class ReflectorException : Exception
+	{
+		public ReflectorException(string msg) 
+			: base(msg)
+		{
+		}
+	}
+
+
     public class ReflectorCollection : ICollection<BaseReflector>
     {
         private Dictionary<string, BaseReflector> reflectors = new Dictionary<string, BaseReflector>();
@@ -31,12 +39,12 @@ namespace EnigmaSim.Components.Reflector
 
         void ICollection<BaseReflector>.Add(BaseReflector item)
         {
-            throw new ApplicationException("The collection is read only");
+            throw new ReflectorException("The collection is read only");
         }
 
         void ICollection<BaseReflector>.Clear()
         {
-            throw new ApplicationException("The collection is read only");
+            throw new ReflectorException("The collection is read only");
         }
 
         bool ICollection<BaseReflector>.Contains(BaseReflector item)
@@ -61,7 +69,7 @@ namespace EnigmaSim.Components.Reflector
 
         bool ICollection<BaseReflector>.Remove(BaseReflector item)
         {
-            throw new ApplicationException("The collection is read only");
+            throw new ReflectorException("The collection is read only");
         }
 
         #endregion

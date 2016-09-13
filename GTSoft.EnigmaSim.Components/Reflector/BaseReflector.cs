@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace EnigmaSim.Components.Reflector
+namespace GTSoft.EnigmaSim.Components.Reflector
 {
     public class BaseReflector
     {

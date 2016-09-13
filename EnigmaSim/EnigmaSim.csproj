@@ -115,5 +115,19 @@
       <DependentUpon>ViewController.cs</DependentUpon>
     </Compile>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GTSoft.EnigmaSim.Components\GTSoft.EnigmaSim.Components.csproj">
+      <Project>{0EA2368F-4D26-4DF1-953B-1B8BD0DBE6E6}</Project>
+      <Name>GTSoft.EnigmaSim.Components</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GTSoft.EnigmaSim.EnigmaEngine\GTSoft.EnigmaSim.EnigmaEngine.csproj">
+      <Project>{835F1C87-2EB7-4742-A3CB-E148CD3B2E8E}</Project>
+      <Name>GTSoft.EnigmaSim.EnigmaEngine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GTSoft.EnigmaSim.Model\GTSoft.EnigmaSim.Model.csproj">
+      <Project>{C7C5DB21-3B0E-4897-A932-F8B4E6481C7C}</Project>
+      <Name>GTSoft.EnigmaSim.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-using EnigmaSim.Components.Utils;
+using GTSoft.EnigmaSim.Components.Utils;
 
-namespace EnigmaSim.Components.Rotor
+namespace GTSoft.EnigmaSim.Components.Rotor
 {
     
     public enum DecodeDirection { Normal, Reverse };

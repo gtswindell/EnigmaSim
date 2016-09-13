@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using EnigmaSim.Components.Utils;
+using GTSoft.EnigmaSim.Components.Utils;
 
-namespace EnigmaSim.EnigmaEngine
+namespace GTSoft.EnigmaSim.EnigmaEngine
 {
     public class Basic3Wheel : EnigmaSim.Model.IEnigma
     {

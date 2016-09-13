@@ -46,20 +46,6 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\EnigmaSim.Components\EnigmaSim.Components.csproj">
-      <Project>{0D240655-2D39-4BA3-95DE-C1E4616D0EC0}</Project>
-      <Name>EnigmaSim.Components</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\EnigmaSim.EnigmaEngine\EnigmaSim.EnigmaEngine.csproj">
-      <Project>{32C8D39E-DCB0-4F56-8AA2-A29AE8CABF28}</Project>
-      <Name>EnigmaSim.EnigmaEngine</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\EnigmaSim.Model\EnigmaSim.Model.csproj">
-      <Project>{188A21CF-8608-432B-BAB1-B41D21DD187E}</Project>
-      <Name>EnigmaSim.Model</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

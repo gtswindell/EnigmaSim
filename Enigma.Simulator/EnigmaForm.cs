@@ -7,10 +7,10 @@ namespace Enigma.Simulator
 {
     public partial class EnigmaForm : Form
     {
-        private EnigmaSim.Components.Rotor.StandardRotorCollection availablRotors = 
-            new EnigmaSim.Components.Rotor.StandardRotorCollection();
-        private EnigmaSim.Components.Reflector.ReflectorCollection availableReflectors =
-            new EnigmaSim.Components.Reflector.ReflectorCollection();
+        private GTSoft.EnigmaSim.Components.Rotor.StandardRotorCollection availablRotors = 
+            new GTSoft.EnigmaSim.Components.Rotor.StandardRotorCollection();
+        private GTSoft.EnigmaSim.Components.Reflector.ReflectorCollection availableReflectors =
+            new GTSoft.EnigmaSim.Components.Reflector.ReflectorCollection();
 
         public EnigmaForm()
         {
@@ -27,14 +27,14 @@ namespace Enigma.Simulator
             middleStart.SelectedIndex = 0;
             slowStart.SelectedIndex = 0;
 
-            foreach (EnigmaSim.Components.Rotor.BaseRotor rotor in availablRotors)
+            foreach (GTSoft.EnigmaSim.Components.Rotor.BaseRotor rotor in availablRotors)
             {
                 fastName.Items.Add(rotor.Name);
                 middleName.Items.Add(rotor.Name);
                 slowName.Items.Add(rotor.Name);
             }
 
-            foreach (EnigmaSim.Components.Reflector.BaseReflector reflector in availableReflectors)
+            foreach (GTSoft.EnigmaSim.Components.Reflector.BaseReflector reflector in availableReflectors)
             {
                 reflectorName.Items.Add(reflector.Name);
             }
@@ -50,9 +50,9 @@ namespace Enigma.Simulator
 
         }
 
-        private EnigmaSim.Model.IEnigma engine = null;
+        private GTSoft.EnigmaSim.Model.IEnigma engine = null;
 
-        private EnigmaSim.Components.Rotor.BaseRotor Rotor(string name)
+        private GTSoft.EnigmaSim.Components.Rotor.BaseRotor Rotor(string name)
         {
             var rotor = (from r in engine.Rotors
                         where r.Name == name
@@ -75,7 +75,7 @@ namespace Enigma.Simulator
 
         private void button2_Click(object sender, EventArgs e)
         {
-            engine = new EnigmaSim.EnigmaEngine.Basic3Wheel(fastName.Text, middleName.Text, slowName.Text, reflectorName.Text);
+            engine = new GTSoft.EnigmaSim.EnigmaEngine.Basic3Wheel(fastName.Text, middleName.Text, slowName.Text, reflectorName.Text);
             Rotor(fastName.Text).SetWheelOffset(fastStart.Text[0]);
             Rotor(middleName.Text).SetWheelOffset(middleStart.Text[0]);
             Rotor(slowName.Text).SetWheelOffset(slowStart.Text[0]);

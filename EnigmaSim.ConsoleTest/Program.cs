@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-using EnigmaSim.Model;
-using EnigmaSim.EnigmaEngine;
+using GTSoft.EnigmaSim.Model;
+using GTSoft.EnigmaSim.EnigmaEngine;
 
 namespace EnigmaSim.ConsoleTest
 {
     class Program
     {
 
-        private static EnigmaSim.Components.Rotor.BaseRotor Rotor(string name, EnigmaSim.Model.IEnigma engine)
+        private static GTSoft.EnigmaSim.Components.Rotor.BaseRotor Rotor(string name, GTSoft.EnigmaSim.Model.IEnigma engine)
         {
             var rotor = (from r in engine.Rotors
                          where r.Name == name

@@ -8,14 +8,14 @@ namespace GTSoft.EnigmaSim.EnigmaEngine
 {
     public class Basic3Wheel : EnigmaSim.Model.IEnigma
     {
-        private EnigmaSim.Components.Rotor.BaseRotor fastRotor;
-        private EnigmaSim.Components.Rotor.BaseRotor middleRotor;
-        private EnigmaSim.Components.Rotor.BaseRotor slowRotor;
-        private EnigmaSim.Components.Reflector.BaseReflector reflector;
+        private GTSoft.EnigmaSim.Components.Rotor.BaseRotor fastRotor;
+        private GTSoft.EnigmaSim.Components.Rotor.BaseRotor middleRotor;
+        private GTSoft.EnigmaSim.Components.Rotor.BaseRotor slowRotor;
+        private GTSoft.EnigmaSim.Components.Reflector.BaseReflector reflector;
         
         public Basic3Wheel(string fastRotorName, string middleRotorName, string slowRotorName, string reflectorName)
         {
-            EnigmaSim.Components.Rotor.StandardRotorCollection availableRotors = new Components.Rotor.StandardRotorCollection();
+            GTSoft.EnigmaSim.Components.Rotor.StandardRotorCollection availableRotors = new Components.Rotor.StandardRotorCollection();
             this.fastRotor = availableRotors[fastRotorName];
             this.middleRotor = availableRotors[middleRotorName];
             this.slowRotor = availableRotors[slowRotorName];
